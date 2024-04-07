@@ -12,7 +12,7 @@ def home_view(request):
     # функцию `reverse`
     pages = {
         'Главная страница': reverse('home'),
-        'Показать текущее время': reverse('time'),
+        'Показать текущее время': reverse('current_time'),
         'Показать содержимое рабочей директории': reverse('workdir'),
     }
     return HttpResponse("<br>".join(f"<a href='{pages}'>{name}</a>" for name, pages in pages.items()))
