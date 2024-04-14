@@ -17,7 +17,8 @@ Including another URLconf
 
 from django.urls import path
 from django.contrib import admin
-from recipes.calculator.views import calculate_recipe_view, home_view
+
+from calculator.views import calculate_recipe_view, home_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),

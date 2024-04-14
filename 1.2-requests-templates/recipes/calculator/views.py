@@ -20,6 +20,7 @@ DATA = {
     # можете добавить свои рецепты ;)
 }
 def calculate_recipe_view(request, recipe_name):
+
     if recipe_name in DATA:
         data = DATA[recipe_name]
         servings = request.GET.get('servings', None)
@@ -37,8 +38,10 @@ def calculate_recipe_view(request, recipe_name):
                 'recipe_name': recipe_name,
                 'recipe': data
             }
+
     else:
         context = None
+
     return render(request, template_name='calculator/index.html', context=context)
 
 
