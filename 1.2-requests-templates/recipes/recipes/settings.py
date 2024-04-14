@@ -1,3 +1,4 @@
+
 """
 Django settings for recipes project.
 
@@ -37,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    'recipes',
     'calculator',
 ]
 

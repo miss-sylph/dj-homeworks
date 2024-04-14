@@ -1,3 +1,4 @@
+
 """recipes URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -15,7 +16,12 @@ Including another URLconf
 """
 
 from django.urls import path
+from django.contrib import admin
+from recipes.calculator.views import calculate_recipe_view, home_view
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('recipes/<recipe_name>/', calculate_recipe_view, name='calculate_recipe'),
+    path('recipes/', home_view, name='home')
     # здесь зарегистрируйте вашу view-функцию
 ]
